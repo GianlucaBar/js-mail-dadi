@@ -20,17 +20,23 @@ if ( verified == true ){
     alert('Ha inizio il gioco');
     // genero due numeri random
     var numeroUtente = Math.floor(Math.random() * 6) + 1;
+
+    document.getElementById('userPlay').innerHTML = "Il tuo dado ha segnato " + numeroUtente;
+
     var numeroComputer = Math.floor(Math.random() * 6) + 1;
 
-    console.log(numeroComputer);
-    console.log(numeroUtente);
+    document.getElementById('computerPlay').innerHTML = "Il dado dell'avversario ha segnato " + numeroComputer;
+
+    // console.log(numeroComputer);
+    // console.log(numeroUtente);
+
     // gioco 
     if (numeroUtente > numeroComputer){
-        alert('Hai vinto');
+        document.getElementById('result').innerHTML = "Hai vinto!";
     } else if ( numeroComputer > numeroUtente ){
-        alert('Hai Perso');
+        document.getElementById('result').innerHTML = "Hai perso :(";
     } else{
-        alert('Hai pareggiato');
+        document.getElementById('result').innerHTML = "Pareggio!";
     }
 } else {
     alert('Non sei iscritto');
