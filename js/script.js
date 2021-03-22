@@ -16,19 +16,24 @@ for ( var i=0; i < whitelist.length; i++){
 
 
 if ( verified == true ){
-    // chiedo all'utente un numero da uno a sei e ne genero un altro random
-    var numeroUtente = parseInt(prompt('inserisci un numero da 1 a 6') );
+
+    alert('Ha inizio il gioco');
+    // genero due numeri random
+    var numeroUtente = Math.floor(Math.random() * 6) + 1;
     var numeroComputer = Math.floor(Math.random() * 6) + 1;
 
+    console.log(numeroComputer);
+    console.log(numeroUtente);
     // gioco 
     if (numeroUtente > numeroComputer){
         alert('Hai vinto');
     } else if ( numeroComputer > numeroUtente ){
         alert('Hai Perso');
     } else{
-        alert('hai pareggiato');
+        alert('Hai pareggiato');
     }
 } else {
+    alert('Non sei iscritto');
 }
 
 
